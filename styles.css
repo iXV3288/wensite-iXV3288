@@ -1,0 +1,152 @@
+@keyframes fadeInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('https://cdn.discordapp.com/attachments/1179861724887785592/1242080250217631816/mkvpnSo.png?ex=664c88e0&is=664b3760&hm=228e5ac995c4d085af3a5d61544827b54d060ee66cf5018db0b1037bda43b943&') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeInFromTop 1s ease-in;
+}
+
+header {
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    text-align: center;
+    animation: fadeInFromTop 1s ease-in 0.5s;
+    animation-fill-mode: both;
+}
+
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    padding: 10px 20px;
+}
+
+.menu-label {
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001; /* Ensure menu label is always on top */
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    font-weight: bold;
+    margin-left: 10px;
+    z-index: 1001; /* Ensure menu toggle is always on top */
+}
+
+.menu-toggle:hover {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Initially hidden */
+    width: 250px;
+    height: 100%;
+    background-color: white;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+    transition: left 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    z-index: 1000; /* Ensure menu is behind the label and toggle */
+}
+
+.menu a {
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid #ccc;
+}
+
+.menu a:hover {
+    background-color: #f0f0f0;
+}
+
+main {
+    margin-top: 125px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: fadeInFromTop 1s ease-in 1s;
+    animation-fill-mode: both;
+}
+
+.link-container {
+    background-color: rgba(255, 255, 255, 0.76);
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.421);
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s ease;
+}
+
+.link-container:hover {
+    transform: scale(1.1);
+}
+
+.link-container img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.link-container a {
+    display: block;
+    color: #4a90e2;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.link-container a:hover {
+    color: #357ABD;
+}
+
+.about {
+    background-color: rgba(255, 255, 255, 0.871);
+    border: 2px solid #4a90e2;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+    animation: fadeInFromTop 1s ease-in 2s;
+    animation-fill-mode: both;
+}
+
+.about p {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+}
